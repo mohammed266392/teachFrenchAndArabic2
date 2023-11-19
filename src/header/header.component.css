@@ -58,3 +58,46 @@
 
 
 
+@media screen and (max-width:2000px) {
+    .header_droite_desktop{
+        display: none;
+    }
+    .header_droite_mobile{
+        height: 100%;
+        width:130px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: aqua;
+    }
+    .container_menu_burger{
+        position: relative;
+        height: 100%;
+        width:53px;
+        background-color: rgba(4, 29, 29, 0.172);
+    }
+
+    .bar_haut,.bar_milieu,.bar_bas{
+        position: absolute;
+        /* transform: translate(0%,-50%); */
+        /* top: 50%; */
+        height: 5px;
+        width: 100%;
+        
+    }
+    .bar_haut{
+        transform: translate(0%,-50%);
+        top: 30%;
+        background-color: red;
+    }
+    .bar_milieu{
+        transform: translate(0%,-50%);
+        top: 50%;
+        background-color: rgb(0, 98, 255);
+    }
+    .bar_bas{
+        transform: translate(0%,-50%);
+        top: 70%;
+        background-color: rgb(68, 255, 0);
+    }
+    
+}
