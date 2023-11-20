@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    color: var(--main-color);
 }
 
 @media screen and (max-width: 500px) {

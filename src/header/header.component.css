@@ -1,6 +1,3 @@
-
-/* @import "../../vars"; */
-
 .header{
     background-color: var(--main-bg-color);
     width: 100%;
@@ -38,8 +35,6 @@
     color: var(--main-color);
     font-size: 0.8rem;
 }
-
-
 .header_droite{
     display: flex;
     justify-content: flex-end;
@@ -51,12 +46,9 @@
 .header_droite_desktop{
     width: 39px;
 }
-
 .header_milieu{
     width: 100%;
 }
-
-
 
 @media screen and (max-width:2000px) {
     .header_droite_desktop{
@@ -67,37 +59,64 @@
         width:130px;
         display: flex;
         justify-content: flex-end;
-        background-color: aqua;
     }
     .container_menu_burger{
         position: relative;
         height: 100%;
         width:53px;
-        background-color: rgba(4, 29, 29, 0.172);
     }
 
-    .bar_haut,.bar_milieu,.bar_bas{
+    .bar_haut,.bar_bas{
         position: absolute;
-        /* transform: translate(0%,-50%); */
-        /* top: 50%; */
-        height: 5px;
+        z-index: 1;
+        height: 3px;
         width: 100%;
+        transition: all 1s ease;
+        /* transition: translate 1s ease; */
         
     }
     .bar_haut{
         transform: translate(0%,-50%);
         top: 30%;
-        background-color: red;
-    }
-    .bar_milieu{
-        transform: translate(0%,-50%);
-        top: 50%;
-        background-color: rgb(0, 98, 255);
+        background-color: var(--main-color);
     }
     .bar_bas{
         transform: translate(0%,-50%);
         top: 70%;
-        background-color: rgb(68, 255, 0);
+        background-color: var(--main-color);
     }
-    
+    .header_droite_mobile.is_clicked .bar_haut{
+        rotate: 315deg;
+        top: 50%;
+    }
+    .header_droite_mobile.is_clicked .bar_bas{
+        rotate: -315deg;
+        top: 50%;
+    }
+    .bar_milieu_container{
+        position: absolute;
+        z-index: 0;
+        display: flex;
+        height: 3px;
+        width: 100%;
+        transform: translate(0%,-50%);
+        top: 50%;
+    }
+    .bar_milieu_container_gauche,.bar_milieu_container_droite{
+        flex-basis: 0px;
+        background-color: var(--main-bg-color);
+        flex-shrink: 0;
+        transition: flex-basis 1s ease;
+    }
+    .bar_milieu_container_milieu{
+        flex-basis: 100%;
+        background-color: var(--main-color);
+        flex-shrink: 1;
+    }
+    .header_droite_mobile.is_clicked .bar_milieu_container_gauche{
+        flex-basis: 50%;
+    }
+    .header_droite_mobile.is_clicked .bar_milieu_container_droite{
+        flex-basis: 50%;
+    }
 }

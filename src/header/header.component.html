@@ -13,10 +13,15 @@
     </div>
     <div class="header_droite">
         <img class="header_droite_desktop" src="./../../assets/images/svg_connection_v3.svg" alt="image login">
-        <div class="header_droite_mobile">
+        <div  [ngClass]="{'header_droite_mobile' :true, 'is_clicked': menuBurgerIsClicked}" (click)="clickHeader()">
             <div class="container_menu_burger">
                 <span class="bar_haut"></span>
-                <span class="bar_milieu"></span>
+                <div class="bar_milieu_container">
+                    <div class="bar_milieu_container_gauche"></div>
+                    <div class="bar_milieu_container_milieu"></div>
+                    <div class="bar_milieu_container_droite"></div>
+                </div>
+                <!-- <span class="bar_milieu"></span> -->
                 <span class="bar_bas"></span>
             </div>
         </div>

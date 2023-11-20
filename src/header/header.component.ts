@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   onglets : string[] = ['Home','Contact']
+  menuBurgerIsClicked : boolean = false
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  clickHeader() : void {
+    this.menuBurgerIsClicked = !this.menuBurgerIsClicked
+  }
 }
