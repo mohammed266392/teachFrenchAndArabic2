@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-onglets-mobile',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./onglets-mobile.component.css']
 })
 export class OngletsMobileComponent implements OnInit {
+
+  @Input() onglets : string[] = []
+  @Input() isClicked : boolean = false
 
   constructor() { }
 

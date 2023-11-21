@@ -1,0 +1,27 @@
+
+
+.container_mobile{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .container_mobile{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.358);
+        color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 0px;
+        width: 100px;
+        overflow: hidden;
+        top: var(--largeur-header);
+        right: 0;
+        transition: height 1s ease;
+    }
+
+    .container_mobile.is_clicked {
+        height: 100px;
+    }
+
+}
