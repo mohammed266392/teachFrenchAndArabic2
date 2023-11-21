@@ -12,7 +12,10 @@
         <app-onglets [onglets]="onglets"></app-onglets>
     </div>
     <div class="header_droite">
-        <img class="header_droite_desktop" src="./../../assets/images/svg_connection_v3.svg" alt="image login">
+        <div class="header_droite_container">        
+            <img class="header_droite_desktop" src="./../../assets/images/svg_connection_v3.svg" alt="image login">
+        </div>
+
         <div  [ngClass]="{'header_droite_mobile' :true, 'is_clicked': menuBurgerIsClicked}" (click)="clickHeader()">
             <div class="container_menu_burger">
                 <span class="bar_haut"></span>
