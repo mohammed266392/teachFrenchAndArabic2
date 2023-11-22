@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   onglets : string[] = ['Home','Contact']
   ongletsMobile : string[] = ['Home','Contact']
+  title : string = "Pierre Noble"
+  logo : string = "./../../assets/images/logo_teachFrenchAndArabic.png"
   menuBurgerIsClicked : boolean = false
   constructor() { }
 

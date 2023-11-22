@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { OngletsComponent } from './compenent-tools/onglets/onglets.component';
 import { HeaderComponent } from './header/header.component';
 import { OngletsMobileComponent } from './compenent-tools/onglets-mobile/onglets-mobile.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     OngletsComponent,
-    OngletsMobileComponent
+    OngletsMobileComponent,
+    LandingComponent
 
   ],
   imports: [
