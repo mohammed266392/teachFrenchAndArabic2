@@ -17,11 +17,23 @@
         overflow: hidden;
         top: var(--largeur-header);
         right: 0;
-        transition: height 1s ease;
+        transition: all 0.6s cubic-bezier(0.35, 0.16, 1, 1);
+        /* transition: padding-top 1s ease; */
+        /* transition: padding-bottom 1s ease; */
     }
 
     .container_mobile.is_clicked {
         height: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+    }
+
+    .onglet{
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
 }

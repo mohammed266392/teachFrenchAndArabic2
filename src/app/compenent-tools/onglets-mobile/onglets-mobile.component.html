@@ -1,4 +1,6 @@
 <div [ngClass]="{'container_mobile':true, 'is_clicked':isClicked}">
-    <div class="onglet" *ngFor="let onglet of onglets">{{onglet}}</div>
+    <div class="onglet" *ngFor="let onglet of onglets">
+        <div class="onglet_name">{{onglet}}</div>
+    </div>
 </div>
 
