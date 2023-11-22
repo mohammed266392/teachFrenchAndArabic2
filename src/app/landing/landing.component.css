@@ -14,8 +14,20 @@
     align-items: center;
     height: 350px;
     width: 500px;
+    position: relative
     /* background-color: aliceblue; */
 }
+.block_image_echantillon{
+    width: 60px;
+    height: 60px;
+    right: -14px;
+    border-radius: 50%;
+    transition: scale 0.5s ease;
+}
+.block_image_echantillon:hover{
+    scale: 1.5;
+}
+
 .block_image_background{
     aspect-ratio: 3/2 auto;
     margin: auto;
@@ -40,6 +52,14 @@
 
 .block_content_description{
     text-align: justify;
+}
+
+.container_bulle{
+    position: absolute;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    right: -35px;
 }
 
 

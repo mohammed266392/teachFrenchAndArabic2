@@ -3,6 +3,11 @@
         <div class="block_image_background">
             <img class="block_image_background_image" src="./../../assets/images/image_marbre_2_v1.jpg" alt="">
         </div>
+        <div class="container_bulle">
+            <img *ngFor="let ech of nbImageEchantillon"  class="block_image_echantillon" [src]="ech.srcLink" alt="">
+        </div>
+        
+ 
     </div>
     <div class="block_content">
         <div class="block_content_block_title"> Élégance en Marbre</div>
@@ -11,5 +16,6 @@
         </div>
         <div class="block_content_button"> contactez-nous </div>
     </div>
+    <!-- <img class="header_droite_desktop" src="./../../assets/images/svg_marbre.svg" alt="image login"> -->
 
 </div>
