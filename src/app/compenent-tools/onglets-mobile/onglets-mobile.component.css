@@ -14,7 +14,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 0px;
-        width: 100px;
+        width: 120px;
         overflow: hidden;
         top: var(--largeur-header);
         right: 0;
@@ -24,7 +24,7 @@
     }
 
     .container_mobile.is_clicked {
-        height: 100px;
+        height: 200px;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 10px;

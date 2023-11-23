@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
+  // imageLandingPage = "./../../assets/images/image_marbre_2_v1.jpg"
+  imageLandingPage1 = "./../../assets/images/image_landing_page2.png"
+  imageLandingPage2 = "./../../assets/images/image_landing_page1.png"
+
   nbImageEchantillon = [
     {id:1,srcLink:"./../../assets/images/bulle-marbre1.png"},
     {id:2,srcLink:"./../../assets/images/bulle-marbre2.png"},

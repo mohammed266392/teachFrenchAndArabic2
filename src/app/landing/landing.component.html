@@ -1,7 +1,10 @@
 <div class="landing">
     <div class="block_image">
-        <div class="block_image_background">
-            <img class="block_image_background_image" src="./../../assets/images/image_marbre_2_v1.jpg" alt="">
+        <div class="block_image_background1">
+            <img class="block_image_background_image" [src]="imageLandingPage1" alt="">
+        </div>
+        <div class="block_image_background2">
+            <img class="block_image_background_image" [src]="imageLandingPage2" alt="">
         </div>
         <div class="container_bulle">
             <img *ngFor="let ech of nbImageEchantillon"  class="block_image_echantillon" [src]="ech.srcLink" alt="">
