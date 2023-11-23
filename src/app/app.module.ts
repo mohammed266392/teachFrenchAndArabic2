@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { OngletsMobileComponent } from './compenent-tools/onglets-mobile/onglets-mobile.component';
 import { LandingComponent } from './landing/landing.component';
 import { Landing2Component } from './landing2/landing2.component';
+import { SavoirFaireComponent } from './savoir-faire/savoir-faire.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,8 @@ import { Landing2Component } from './landing2/landing2.component';
     OngletsComponent,
     OngletsMobileComponent,
     LandingComponent,
-    Landing2Component
-
+    Landing2Component,
+    SavoirFaireComponent
   ],
   imports: [
     BrowserModule,
