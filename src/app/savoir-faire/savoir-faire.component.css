@@ -19,18 +19,68 @@
     height: 100%;
     display: flex;
     align-items: center;
+    container-type: inline-size;
+    container-name: borderName;
 }
+
+@container borderName (max-width: 400px ){
+    .container_top_blockgauche_block{
+        height: 65%;
+    }
+}
+
+/* .container_top_blockgauche_border{
+    container-type: inline-size;
+    width: 100%;
+}
+
+.container_top_blockgauche_border_test{
+    height: 350px;
+    background-color: aqua;
+}
+@container (max-width: 400px ){
+    .container_top_blockgauche_border_test{
+        background-color: rgb(174, 0, 255);
+    }
+}  */
+
+
+
 .container_top_blockgauche_block{
-    height: 125px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 36px;
     width: 83%;
     margin: auto;
+    transform: translateX(358px);
+    padding: 14px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 2s ease;
+}
+.container_top_blockgauche_block.visible{
+    transform: translateX(0px);
+}
+.animatedDiv{
+    transform: translateX(0px);
 }
 .container_top_blockgauche_block_title{
     font-size: larger;
+    display: flex;
+    flex-direction: column;
 }
+.container_top_blockgauche_block_description{
+    text-align: justify;
+}
+.container_top_blockgauche_block_title::after{
+    content:"";
+    margin-top : 10px;
+    height: 1px;
+    width: 50%;
+    background-color: black;
+}
+
+
 .container_top_blockmilieu{
     overflow: hidden;
     position:relative;
@@ -40,15 +90,19 @@
 }
 .container_top_blockmilieu_circle{
     position: absolute;
-    width: 165%;
-    height: 255%;
-    bottom: -4%;
-    left: -100%;
+    transform: translate(-50%, -50%);
+    width: 106%;
+    height: 203%;
     z-index: 1;
     box-shadow: rgba(255, 255, 255, 0.936) 0px 2px 4px 0px, rgba(14, 30, 37, 0.902) 0px 2px 16px 0px;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    transition: all 1s ease;
 }
+
+
+
+
 .container_top_blockmilieu_background{
     position: absolute;
     top:0;
@@ -58,20 +112,26 @@
     background-color: black;
 }
 
+
 .container_top_blockmilieu_imagetop{
     position: absolute;
     z-index: 2;
-    width: 175px;
+    width: 224px;
     right: 8%;
-    top: 18%;
+    top: 44%;
 }
 
-.container_top_blockmilieu_imagebottom{
-    position: absolute;
-    z-index: 2;
-    width: 175px;
-    left: 53%;
-    bottom: 5%;
+.cercle_avec_echantillon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-80deg);
+    transform-origin: 0% 0%;
+    transform: rotate(90deg);
+    transition: all 1s ease;
+}
+.cercle_avec_echantillon.visible{
+    transform: rotate(0deg);
 }
 
 .container_top_blockmilieu_imagebulle1{
@@ -81,7 +141,7 @@
     width: 40px;
     border-radius: 50%;
     bottom: 1%;
-    left: 11%;
+    left: 18%;
 }
 
 .container_top_blockmilieu_imagebulle2{
@@ -90,8 +150,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    bottom: 10%;
-    left: 23%;
+    bottom: 14%;
+    left: 29%;
 }
 
 .container_top_blockmilieu_imagebulle3{
@@ -100,8 +160,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    bottom: 23%;
-    left: 35%;
+    bottom: 31%;
+    left: 38%;
 }
 
 
@@ -111,18 +171,18 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    bottom: 43%;
-    left: 47%;
-}
-
-.container_top_blockmilieu_imagebulle4{
-    position: absolute;
-    z-index: 2;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    bottom: 39%;
+    bottom: 50%;
     left: 45%;
+}
+
+.container_top_blockmilieu_imagebulle4{
+    position: absolute;
+    z-index: 2;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    bottom: 49%;
+    left: 44%;
 }
 
 .container_top_blockmilieu_imagebulle5{
@@ -131,8 +191,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    bottom: 59%;
-    left: 53%;
+    bottom: 70%;
+    left: 49%;
 }
 
 .container_top_blockmilieu_imagebulle6{
@@ -141,7 +201,26 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    bottom: 78%;
-    left: 58%;
+    bottom: 89%;
+    left: 50%;
+}
+/* sqrt( calc(400 * 400px) - calc(200 * 200px) ) */
+
+
+
+.container_bottom{
+    height: 400px;
+    background-color: aqua;
 }
 
+@media screen and (max-width:500px) {
+    
+    .container_top_blockgauche{
+        width: 80%;
+    }
+
+    .container_top_blockmilieu_imagetop{
+        width: 139px;
+    }
+
+}

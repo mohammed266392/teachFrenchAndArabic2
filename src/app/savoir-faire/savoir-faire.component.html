@@ -2,22 +2,24 @@
     <div class="container_title">Notre Savoire-Faire</div>
     <div class="container_top">
         <div class="container_top_blockgauche">
-            <div class="container_top_blockgauche_block">
-                <div class="container_top_blockgauche_block_title">Plan de travail pour cuisine</div>
-                <div class="container_top_blockgauche_block_description">revêtement en granit, marbre, quartz, céramique... Tant de choix et une finition soignée pour donner toute l'élégance et un caractère unique à votre cuisine. </div>
+                <div [ngClass]="{'container_top_blockgauche_block':true,'visible': visible}">
+                    <div class="container_top_blockgauche_block_title">Plan de travail pour cuisine</div>
+                    <div class="container_top_blockgauche_block_description">revêtement en granit, marbre, quartz, céramique... Tant de choix et une finition soignée pour donner toute l'élégance et un caractère unique à votre cuisine. </div>
+                </div>
             </div>
-        </div>
         <div class="container_top_blockmilieu">
-            <div class="container_top_blockmilieu_circle"></div>
             <div class="container_top_blockmilieu_background"></div>
             <img class="container_top_blockmilieu_imagetop" src="./../../assets/images/plan_travail_cuisine.png" alt="">
-            <img class="container_top_blockmilieu_imagebottom" src="./../../assets/images/plan_travail_cuisine2.png" alt="">
-            <img  class="container_top_blockmilieu_imagebulle1" src="./../../assets/images/bulle-marbre1.png" alt="">
-            <img  class="container_top_blockmilieu_imagebulle2" src="./../../assets/images/bulle-marbre2.png" alt="">
-            <img  class="container_top_blockmilieu_imagebulle3" src="./../../assets/images/bulle-marbre3.png" alt="">
-            <img  class="container_top_blockmilieu_imagebulle4" src="./../../assets/images/bulle-marbre4.png" alt="">
-            <img  class="container_top_blockmilieu_imagebulle5" src="./../../assets/images/bulle-marbre5.png" alt="">
-            <img  class="container_top_blockmilieu_imagebulle6" src="./../../assets/images/bulle-marbre6.png" alt="">
+            <div [ngClass]="{'cercle_avec_echantillon': true,'visible': visible}">
+                <div [ngClass]="{'container_top_blockmilieu_circle':true}"></div>
+                <img  class="container_top_blockmilieu_imagebulle1" src="./../../assets/images/bulle-marbre1.png" alt="">
+                <img  class="container_top_blockmilieu_imagebulle2" src="./../../assets/images/bulle-marbre2.png" alt="">
+                <img  class="container_top_blockmilieu_imagebulle3" src="./../../assets/images/bulle-marbre3.png" alt="">
+                <img  class="container_top_blockmilieu_imagebulle4" src="./../../assets/images/bulle-marbre4.png" alt="">
+                <img  class="container_top_blockmilieu_imagebulle5" src="./../../assets/images/bulle-marbre5.png" alt="">
+                <img  class="container_top_blockmilieu_imagebulle6" src="./../../assets/images/bulle-marbre6.png" alt="">
+            </div>
+            
         </div>
         <!-- <div class="container_top_blockdroit"></div> -->
     </div>
