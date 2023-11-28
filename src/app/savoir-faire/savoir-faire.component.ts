@@ -7,6 +7,19 @@ import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 })
 export class SavoirFaireComponent implements OnInit {
   visible : boolean = false;
+  images = [{
+    id:1,
+    src:"./../../assets/images/marbre_escalier2.png",
+    icon:"./../../assets/images/icons-escaliers.png",
+    title:"Escaliers",
+    description:"une escaliers en pierre raconte quelque chose. Il apportera une âme à votre intérieure et s'embellira avec le temps."
+  },{
+  id:2,
+  src:"./../../assets/images/marbre_decoration.png",
+  icon:"./../../assets/images/icon_decoration.png",
+  title:"Décoration",
+  description:"décoration en pierre naturelle :  Margelles, dallage, revêtement mural, cheminées.."
+}]
 
   constructor(private el: ElementRef)  {}
   
