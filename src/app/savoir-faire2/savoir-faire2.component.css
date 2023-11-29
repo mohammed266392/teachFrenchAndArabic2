@@ -32,10 +32,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 36px;
-    width: 83%;
     margin: auto;
     transform: translateX(358px);
-    padding: 14px;
+    padding: 7px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: transform 2s ease;
 }
@@ -130,9 +129,6 @@
 
 @media screen and (max-width:500px) {
 
-    .container_top_blockgauche_block{
-        height: 80%;
-    } 
 
     .container_bottom_service_icon_content{
         height: 30px;
@@ -156,7 +152,7 @@
 
     
     .container_top_blockgauche{
-        width: 40%;
+        width: 45%;
     }
     .container_top_blockmilieu{
         width: 55%;
