@@ -83,7 +83,7 @@
 .container_top_blockmilieu_imagetop{
     position: absolute;
     z-index: 2;
-    width: 224px;
+    width: 386px;
     right: 12%;
     top: 50%;
     transform: translate(0%, -50%);
@@ -223,9 +223,17 @@
 
 
 @media screen and (max-width:500px) {
-    .container_bottom_service_image_content{
+
+    .container_top_blockgauche_block{
+        height: 80%;
+    } 
+
+    .container_bottom_service_icon_content{
         height: 30px;
         width: 30px;
+    }
+    .container_bottom_service_icon_content{
+
     }
     .container_top{
         margin-bottom: 20px;
@@ -244,12 +252,15 @@
         transform-origin: -80% 50%;
     }
     .container_top_blockgauche{
-        width: 80%;
+        width: 40%;
+    }
+    .container_top_blockmilieu{
+        width: 55%;
     }
 
     .container_top_blockmilieu_imagetop{
         transform: translate(50%, -50%);
-        width: 139px;
+        width: 100%;
         right: 50%;
         top: 50%;
     }
