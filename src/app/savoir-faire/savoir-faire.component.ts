@@ -7,6 +7,9 @@ import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 })
 export class SavoirFaireComponent implements OnInit {
   visible : boolean = false;
+  imageBlock1 = "./../../assets/images/cuisine_marbre_blanc1.jpg"
+
+
   images = [{
     id:1,
     src:"./../../assets/images/marbre_escalier2.png",
