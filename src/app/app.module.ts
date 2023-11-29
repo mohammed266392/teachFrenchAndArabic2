@@ -10,6 +10,7 @@ import { LandingComponent } from './landing/landing.component';
 import { Landing2Component } from './landing2/landing2.component';
 import { SavoirFaireComponent } from './savoir-faire/savoir-faire.component';
 import { ScrollAnimation } from 'src/directives/scrollAnimation.directive';
+import { SavoirFaire2Component } from './savoir-faire2/savoir-faire2.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ScrollAnimation } from 'src/directives/scrollAnimation.directive';
     LandingComponent,
     Landing2Component,
     SavoirFaireComponent,
-    ScrollAnimation
+    SavoirFaire2Component
   ],
   imports: [
     BrowserModule,
