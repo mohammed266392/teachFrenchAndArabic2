@@ -8,8 +8,8 @@ describe('SavoirFaireComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SavoirFaireComponent ]
-    })
+    imports: [SavoirFaireComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(SavoirFaireComponent);

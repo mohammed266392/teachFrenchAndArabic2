@@ -13,21 +13,19 @@ import { ScrollAnimation } from 'src/directives/scrollAnimation.directive';
 import { SavoirFaire2Component } from './savoir-faire2/savoir-faire2.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    OngletsComponent,
-    OngletsMobileComponent,
-    LandingComponent,
-    Landing2Component,
-    SavoirFaireComponent,
-    SavoirFaire2Component
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HeaderComponent,
+        OngletsComponent,
+        OngletsMobileComponent,
+        LandingComponent,
+        Landing2Component,
+        SavoirFaireComponent,
+        SavoirFaire2Component
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

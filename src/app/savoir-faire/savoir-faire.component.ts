@@ -1,9 +1,12 @@
 import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+import { NgClass, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-savoir-faire',
-  templateUrl: './savoir-faire.component.html',
-  styleUrls: ['./savoir-faire.component.css']
+    selector: 'app-savoir-faire',
+    templateUrl: './savoir-faire.component.html',
+    styleUrls: ['./savoir-faire.component.css'],
+    standalone: true,
+    imports: [NgClass, NgFor]
 })
 export class SavoirFaireComponent implements OnInit {
   visible : boolean = false;
