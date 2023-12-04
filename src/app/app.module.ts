@@ -9,6 +9,7 @@ import { OngletsMobileComponent } from './compenent-tools/onglets-mobile/onglets
 import { LandingComponent } from './landing/landing.component';
 import { Landing2Component } from './landing2/landing2.component';
 import { SavoirFaireComponent } from './savoir-faire/savoir-faire.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,6 @@ import { SavoirFaireComponent } from './savoir-faire/savoir-faire.component';
     LandingComponent,
     Landing2Component,
     SavoirFaireComponent,
-    ScrollAnimation
   ],
   imports: [
     BrowserModule,
