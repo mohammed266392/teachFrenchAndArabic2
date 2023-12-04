@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SavoirFaire2Component } from './savoir-faire2/savoir-faire2.component';
 import { HeaderComponent } from './header/header.component';
-import { Landing2Component } from './landing2/landing2.component';
+import { FooterComponent } from './footer/footer.component';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Landing2Component } from './landing2/landing2.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
-    imports: [HeaderComponent, Landing2Component, SavoirFaire2Component]
+    imports:[RouterOutlet,HeaderComponent,FooterComponent]
 })
 export class AppComponent {
   title = 'teachFrenchAndArabic2';
