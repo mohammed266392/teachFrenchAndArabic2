@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
+import { Onglet } from 'src/app/object';
 
 @Component({
     selector: 'app-onglets',
@@ -9,10 +11,14 @@ import { NgFor } from '@angular/common';
     imports: [NgFor]
 })
 export class OngletsComponent implements OnInit {
-  @Input() onglets: string[] = [];
-  constructor() { }
+  @Input() onglets: Onglet[] = [];
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTo(url : string): void{
+    this.router.navigateByUrl("/"+url)
   }
 
 }

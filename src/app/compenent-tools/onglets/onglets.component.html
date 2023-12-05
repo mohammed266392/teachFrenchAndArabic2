@@ -1,4 +1,4 @@
 <div class="container">
-        <div class="onglet" *ngFor="let onglet of onglets">{{onglet}}</div>
+        <div class="onglet" *ngFor="let onglet of onglets" (click)="navigateTo(onglet.getNameNavigate())">{{onglet.getName()}}</div>
 </div>
 
