@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgClass, NgFor } from '@angular/common';
+import { Onglet } from 'src/app/object';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-onglets-mobile',
@@ -10,12 +12,16 @@ import { NgClass, NgFor } from '@angular/common';
 })
 export class OngletsMobileComponent implements OnInit {
 
-  @Input() onglets : string[] = []
+  @Input() onglets : Onglet[] = []
   @Input() isClicked : boolean = false
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTo(url : string): void{
+    this.router.navigateByUrl("/"+url)
   }
 
 }

@@ -14,7 +14,7 @@ import { Onglet } from '../object';
 })
 export class HeaderComponent implements OnInit {
   onglets : Onglet[] = [new Onglet('Home','home'),new Onglet('Contact','contact'),new Onglet('A propos','a-propos')]
-  ongletsMobile : string[] = ['Home','Contact','A propos']
+  ongletsMobile : Onglet[] = [new Onglet('Home','home'),new Onglet('Contact','contact'),new Onglet('A propos','a-propos')]
   title : string = "Pierre Noble"
   logo : string = "./../../assets/images/logo_teachFrenchAndArabic.png"
   menuBurgerIsClicked : boolean = false
