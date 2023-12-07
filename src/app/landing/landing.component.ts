@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+    selector: 'app-landing',
+    templateUrl: './landing.component.html',
+    styleUrls: ['./landing.component.css'],
+    standalone: true,
+    imports: [NgFor]
 })
 export class LandingComponent implements OnInit {
   // imageLandingPage = "./../../assets/images/image_marbre_2_v1.jpg"

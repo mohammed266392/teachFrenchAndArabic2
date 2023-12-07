@@ -2,9 +2,15 @@
     display: flex;
     gap: 15px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     height: 100%;
     color: var(--main-color);
+}
+
+.onglet{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {

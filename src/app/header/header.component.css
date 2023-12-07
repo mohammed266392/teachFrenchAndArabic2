@@ -75,7 +75,7 @@
     .bar_haut,.bar_bas{
         position: absolute;
         z-index: 1;
-        height: 3px;
+        height: 2px;
         width: 100%;
         transition: all 1s ease;
         
@@ -102,7 +102,7 @@
         position: absolute;
         z-index: 0;
         display: flex;
-        height: 3px;
+        height: 2px;
         width: 100%;
         transform: translate(0%,-50%);
         top: 50%;

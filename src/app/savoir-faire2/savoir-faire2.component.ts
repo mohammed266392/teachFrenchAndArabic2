@@ -1,9 +1,12 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { NgClass, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-savoir-faire2',
-  templateUrl: './savoir-faire2.component.html',
-  styleUrls: ['./savoir-faire2.component.css']
+    selector: 'app-savoir-faire2',
+    templateUrl: './savoir-faire2.component.html',
+    styleUrls: ['./savoir-faire2.component.css'],
+    standalone: true,
+    imports: [NgClass, NgFor]
 })
 export class SavoirFaire2Component implements OnInit {
 

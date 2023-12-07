@@ -1,0 +1,27 @@
+.container{
+    background-color:  #F2F2F2;
+    color: rgb(0, 0, 0);
+    padding-top: 15px;
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container_reseau{
+    display: flex;
+    gap: 10px;
+}
+
+.container_reseau_email, .container_reseau_whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.image{
+    width:15px;
+    height:15px;
+}

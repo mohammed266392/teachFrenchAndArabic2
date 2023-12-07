@@ -8,8 +8,8 @@ describe('OngletsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OngletsComponent ]
-    })
+    imports: [OngletsComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(OngletsComponent);
