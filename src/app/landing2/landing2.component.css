@@ -38,6 +38,7 @@
     box-shadow: rgb(0 0 0 / 20%) 0px 7px 29px 0px;
     padding: 14px;
     background-color: #ffffffb5;
+    backdrop-filter: blur(1px);
 
 }
 

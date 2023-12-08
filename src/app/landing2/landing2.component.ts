@@ -1,10 +1,12 @@
+import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-landing2',
     templateUrl: './landing2.component.html',
     styleUrls: ['./landing2.component.css'],
-    standalone: true
+    standalone: true,
+    imports  : [ NgStyle]
 })
 export class Landing2Component implements OnInit {
   image1 ="./../../assets/images/cuisine_marbre.jpg"
