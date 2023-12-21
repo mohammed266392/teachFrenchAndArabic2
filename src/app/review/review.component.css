@@ -1,0 +1,98 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+.container_top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aquamarine;
+    width: 100%;
+    height: 50%;
+}
+.container_bottom{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    height: 50%;
+}
+.container_review{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 70%;
+    perspective: 900px;
+    perspective-origin: top;
+    background-color: beige;
+}
+.container_review_block{
+    height: 90%;
+    width: 400px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+.container_review--main{
+    transform: translateX(0%) rotateY(0deg);
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+.container_review--left{
+    transform: translateX(-117%) rotateY(65deg);
+    background-color: rgba(106, 114, 68, 0.582);
+}
+
+.container_review--right{
+    transform: translateX(117%) rotateY(-65deg);
+    background-color: rgba(36, 71, 176, 0.582);
+}
+.container_review--too-left{
+    transform: translateX(-200%) rotateY(90deg);
+    background-color: rgba(39, 178, 90, 0.702);
+}
+.container_review--too-right{
+    transform: translateX(200%) rotateY(-90deg);
+    background-color: rgba(178, 39, 173, 0.702);
+}
+
+.container_review.turnright .container_review--too-left{
+    transform: translateX(-117%) rotateY(65deg);
+}
+.container_review.turnright .container_review--left{
+    transform: translateX(0%) rotateY(0deg);
+}
+.container_review.turnright .container_review--main{
+    transform: translateX(117%) rotateY(-65deg);
+}
+.container_review.turnright .container_review--right{
+    transform: translateX(200%) rotateY(-90deg);
+}
+.container_review.turnright .container_review--too-right{
+    transform: translateX(200%) rotateY(-90deg);
+}
+
+.container_fleche--droite{
+    position: absolute;
+    z-index: 2;
+    width: 57px;
+    right: 1%;
+}
+
+.container_fleche--gauche{
+    position: absolute;
+    z-index: 2;
+    width: 57px;
+    left: 1%;
+    transform: rotate(180deg);
+}

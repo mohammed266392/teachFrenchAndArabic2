@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="container_top"></div>
+    <div class="container_bottom"></div>
+    <div class="container_review">
+        <div *ngFor="let review of reviews" [ngClass]="{'container_review_block':true,
+        'container_review--too-left':review.getTooLeft(),
+        'container_review--left': review.getLeft(),
+        'container_review--main': review.getMain(),
+        'container_review--right': review.getRight(),
+        'container_review--too-right': review.getTooRight()
+    }">
+</div>
+        
+<!--         
+        
+        <div [ngClass]="container_review_block container_review--left"></div>
+        <div [ngClass]="container_review_block container_review--main"></div>
+        <div [ngClass]="container_review_block container_review--right"></div>
+        <div [ngClass]="container_review_block container_review--too-right"></div> -->
+
+    </div>
+    <img src="../../assets/images/fleche-droite.png" alt="" (click)="clickFlecheDroite()" class="container_fleche--droite">
+    <img src="../../assets/images/fleche-droite.png" alt="" (click)="clickFlecheGauche()"class="container_fleche--gauche">
+</div>
