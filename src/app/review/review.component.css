@@ -40,30 +40,31 @@
     width: 400px;
     position: absolute;
     transform-style: preserve-3d;
+    background-color: rgba(0, 0, 0, 0.582);
     transition: transform 1s ease;
 }
 
 .container_review--main{
     transform: translateX(0%) rotateY(0deg);
-    background-color: rgba(0, 0, 0, 0.582);
+    /* background-color: rgba(0, 0, 0, 0.582); */
 }
 
 .container_review--left{
     transform: translateX(-117%) rotateY(65deg);
-    background-color: rgba(106, 114, 68, 0.582);
+    /* background-color: rgba(106, 114, 68, 0.582); */
 }
 
 .container_review--right{
     transform: translateX(117%) rotateY(-65deg);
-    background-color: rgba(36, 71, 176, 0.582);
+    /* background-color: rgba(36, 71, 176, 0.582); */
 }
 .container_review--too-left{
     transform: translateX(-200%) rotateY(90deg);
-    background-color: rgba(39, 178, 90, 0.702);
+    /* background-color: rgba(39, 178, 90, 0.702); */
 }
 .container_review--too-right{
     transform: translateX(200%) rotateY(-90deg);
-    background-color: rgba(178, 39, 173, 0.702);
+    /* background-color: rgba(178, 39, 173, 0.702); */
 }
 
 .container_review.turnright .container_review--too-left{

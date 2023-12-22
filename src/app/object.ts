@@ -29,9 +29,9 @@ export class Review {
 
     constructor(note: string, username: string, description:string, datePublication:string ) {
         this.note = note;
-        this.username = note;
-        this.description = note;
-        this.datePublication = note;
+        this.username = username;
+        this.description = description;
+        this.datePublication = datePublication;
     }
 
     getTooLeft():boolean{

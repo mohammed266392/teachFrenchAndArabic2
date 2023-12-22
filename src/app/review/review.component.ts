@@ -12,66 +12,63 @@ import { NgClass, NgFor } from '@angular/common';
 export class ReviewComponent {
 
   reviews : Review[] = [
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review('5','Moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review('5','Antoine2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review('5','Ayoub2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review('5','Mounir2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
   ]
-  tabIndex: Object = {
-   'container_review--too-left':0,
-   'container_review--left':1,
-   'container_review--main':2,
-   'container_review--right':3,
-   'container_review--too-right':4,
-  }
-  indexDepart : number = 0
-  indexFin : number = 4
+  reviewsByEtats : boolean[][] = []
+  indexMain : number = 0 
 
   constructor() { 
-    console.log('1--', this.reviews)
-
-    this.initialisationReviews(0,4)
-
-    console.log('2--', this.reviews)
+    this.initialisationReviews()
+    console.log('initialisation : ',this.reviewsByEtats)
   }
 
-  initialisationReviews(valueDepart : number, valueFin : number){
-    let i = valueDepart
-    for(const review of this.reviews){
-      if(i==valueDepart){
-        review.setTooLeft(true)
+  initialisationReviews(){
+    for(let i = 0; i<= this.reviews.length; i++){
+      if(i==0){
+        this.reviewsByEtats.push([false,false,true,false,false])
       }
-      if(i==valueDepart+1 && i<=valueFin ){
-        review.setLeft(true)
+      if(i==1){
+        this.reviewsByEtats.push([false,false,false,true,false])
       }
-      if(i==valueDepart+2 && i<=valueFin ){
-        review.setMain(true)
+      if(i>2){
+        this.reviewsByEtats.push([false,false,false,false,true])
       }
-      if(i==valueDepart+3 && i<=valueFin ){
-        review.setRight(true)
-      }
-      if(i==valueDepart+4 && i<=valueFin ){
-        review.setTooRight(true)
-      }
-      i++
     }
   }
 
 
   clickFlecheDroite(){
     console.log("click droit")
-    this.initialisationReviews(this.indexDepart+1,this.indexFin+1)
-    console.log('3--',this.reviews)
-    // for(let review of this.reviews){
+    let indexCurrent = this.indexMain
+    while(indexCurrent<this.reviews.length && this.reviewsByEtats[indexCurrent][4]!=true){
+      console.log('1indexCurrent',indexCurrent)
+      this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent])
+      indexCurrent = indexCurrent+1
+    }
+    console.log('2indexCurrent',indexCurrent)
+    if(indexCurrent<this.reviews.length && this.reviewsByEtats[indexCurrent][4]==true){
+      console.log('3indexCurrent',indexCurrent)
+      this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent])
+    }
+    this.indexMain = this.indexMain +1
 
-    // }
   }
-
+  decalageEtatAGauche(tab : boolean[]) : void{
+    console.log('4--',tab)
+    const indexADecaler = tab.findIndex( element => element==true)
+    if(indexADecaler!=0){
+      tab[indexADecaler]=false
+      tab[indexADecaler-1]=true
+    }
+  }
   clickFlecheGauche(){
     console.log("click gauche")
   }

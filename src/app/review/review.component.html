@@ -2,14 +2,16 @@
     <div class="container_top"></div>
     <div class="container_bottom"></div>
     <div class="container_review">
-        <div *ngFor="let review of reviews" [ngClass]="{'container_review_block':true,
-        'container_review--too-left':review.getTooLeft(),
-        'container_review--left': review.getLeft(),
-        'container_review--main': review.getMain(),
-        'container_review--right': review.getRight(),
-        'container_review--too-right': review.getTooRight()
-    }">
-</div>
+        <div *ngFor="let reviewByEtat of reviewsByEtats; 
+        let indexOfelement=index;" 
+                    [ngClass]="{'container_review_block':true,
+                                'container_review--too-left':reviewByEtat[0],
+                                'container_review--left': reviewByEtat[1],
+                                'container_review--main': reviewByEtat[2],
+                                'container_review--right': reviewByEtat[3],
+                                'container_review--too-right': reviewByEtat[4]}">
+        {{reviews[indexOfelement].username}}
+        </div>
         
 <!--         
         
