@@ -24,6 +24,8 @@ export class ReviewComponent {
   ]
   reviewsByEtats : boolean[][] = []
   indexMain : number = 0 
+  hiddenFlecheDroite :boolean=false
+  hiddenFlecheGauche :boolean=true
 
   constructor() { 
     this.initialisationReviews()
@@ -48,29 +50,64 @@ export class ReviewComponent {
   clickFlecheDroite(){
     console.log("click droit")
     let indexCurrent = this.indexMain
-    while(indexCurrent<this.reviews.length && this.reviewsByEtats[indexCurrent][4]!=true){
-      console.log('1indexCurrent',indexCurrent)
-      this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent])
-      indexCurrent = indexCurrent+1
+    if(indexCurrent>0){
+      this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent-1])
     }
-    console.log('2indexCurrent',indexCurrent)
-    if(indexCurrent<this.reviews.length && this.reviewsByEtats[indexCurrent][4]==true){
-      console.log('3indexCurrent',indexCurrent)
+    if(indexCurrent<this.reviews.length){
       this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent])
+    }
+    if(indexCurrent+1<this.reviews.length){
+      this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent+1])
+    }
+    if(indexCurrent+2<this.reviews.length){
+      this.decalageEtatAGauche(this.reviewsByEtats[indexCurrent+2])
     }
     this.indexMain = this.indexMain +1
+    this.hiddenFlecheDroite = this.isHiddenFlecheDroite()
+    this.hiddenFlecheGauche = this.isHiddenFlecheGauche()
+  }
+
+  clickFlecheGauche(){
+    console.log("click gauche")
+    let indexCurrent = this.indexMain
+    if((indexCurrent-2)>=0){
+      console.log("blabla")
+      this.decalageEtatADroite(this.reviewsByEtats[indexCurrent-2])
+    }
+    if((indexCurrent-1)>=0){
+      this.decalageEtatADroite(this.reviewsByEtats[indexCurrent-1])
+    }
+    this.decalageEtatADroite(this.reviewsByEtats[indexCurrent])
+    if(indexCurrent+1<this.reviewsByEtats.length){
+      this.decalageEtatADroite(this.reviewsByEtats[indexCurrent+1])
+    }
+    this.indexMain = this.indexMain -1
+    this.hiddenFlecheDroite = this.isHiddenFlecheDroite()
+    this.hiddenFlecheGauche = this.isHiddenFlecheGauche()
 
   }
+  decalageEtatADroite(tab: boolean[]) {
+    console.log('6--',tab)
+    const indexADecaler = tab.findIndex( element => element==true)
+    if(indexADecaler<this.reviews.length){
+      tab[indexADecaler]=false
+      tab[indexADecaler+1]=true
+    }
+  }
+
   decalageEtatAGauche(tab : boolean[]) : void{
-    console.log('4--',tab)
     const indexADecaler = tab.findIndex( element => element==true)
     if(indexADecaler!=0){
       tab[indexADecaler]=false
       tab[indexADecaler-1]=true
     }
   }
-  clickFlecheGauche(){
-    console.log("click gauche")
+
+  isHiddenFlecheDroite() : boolean{
+    return this.indexMain==this.reviews.length-1
+  }
+  isHiddenFlecheGauche() : boolean{
+    return this.indexMain==0
   }
 
 }

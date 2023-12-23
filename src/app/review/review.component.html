@@ -21,6 +21,6 @@
         <div [ngClass]="container_review_block container_review--too-right"></div> -->
 
     </div>
-    <img src="../../assets/images/fleche-droite.png" alt="" (click)="clickFlecheDroite()" class="container_fleche--droite">
-    <img src="../../assets/images/fleche-droite.png" alt="" (click)="clickFlecheGauche()"class="container_fleche--gauche">
+    <img src="../../assets/images/fleche-droite.png" alt="" (click)="clickFlecheDroite()" [ngClass]="{'container_fleche--droite':true, 'hidden':hiddenFlecheDroite}">
+    <img src="../../assets/images/fleche-droite.png" alt="" (click)="clickFlecheGauche()"[ngClass]="{'container_fleche--gauche':true, 'hidden':hiddenFlecheGauche}">
 </div>

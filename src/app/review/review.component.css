@@ -97,3 +97,10 @@
     left: 1%;
     transform: rotate(180deg);
 }
+
+.container_fleche--gauche.hidden{
+    display: none;
+}
+.container_fleche--droite.hidden{
+    display: none;
+}
