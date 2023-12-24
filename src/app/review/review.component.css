@@ -36,12 +36,14 @@
     background-color: beige;
 }
 .container_review_block{
+    display: flex;
+    flex-direction: column;
     height: 90%;
     width: 400px;
     position: absolute;
     transform-style: preserve-3d;
     background-color: rgba(0, 0, 0, 0.582);
-    transition: transform 1s ease;
+    transition: transform 1s ease-in-out;
 }
 
 .container_review--main{
@@ -113,4 +115,23 @@
 
 .etoile{
     width: 15px;
+}
+.container_review_date{
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+}
+.container_review_description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+    font-style: italic;
+}
+.container_review_user{
+    display: flex;
+    flex-grow: 0;
+    justify-content: end;
+    margin-bottom: 2px;
+    margin-right: 2px;
 }

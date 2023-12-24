@@ -20,7 +20,7 @@ export class ReviewComponent {
     new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
     new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'mohaFIN2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
   ]
   reviewsByEtats : boolean[][] = []
   indexMain : number = 0 
@@ -29,18 +29,20 @@ export class ReviewComponent {
 
   constructor() { 
     this.initialisationReviews()
+    this.hiddenFlecheDroite = this.isHiddenFlecheDroite()
+    this.hiddenFlecheGauche = this.isHiddenFlecheGauche()
     console.log('initialisation : ',this.reviewsByEtats)
   }
 
   initialisationReviews(){
-    for(let i = 0; i<= this.reviews.length; i++){
+    for(let i = 0; i< this.reviews.length; i++){
       if(i==0){
         this.reviewsByEtats.push([false,false,true,false,false])
       }
       if(i==1){
         this.reviewsByEtats.push([false,false,false,true,false])
       }
-      if(i>2){
+      if(i>1){
         this.reviewsByEtats.push([false,false,false,false,true])
       }
     }
@@ -68,7 +70,7 @@ export class ReviewComponent {
   }
 
   clickFlecheGauche(){
-    console.log("click gauche")
+    console.log("click gauche : ",this.indexMain)
     let indexCurrent = this.indexMain
     if((indexCurrent-2)>=0){
       console.log("blabla")
@@ -78,6 +80,7 @@ export class ReviewComponent {
       this.decalageEtatADroite(this.reviewsByEtats[indexCurrent-1])
     }
     this.decalageEtatADroite(this.reviewsByEtats[indexCurrent])
+  
     if(indexCurrent+1<this.reviewsByEtats.length){
       this.decalageEtatADroite(this.reviewsByEtats[indexCurrent+1])
     }
@@ -88,11 +91,14 @@ export class ReviewComponent {
   }
   decalageEtatADroite(tab: boolean[]) {
     console.log('6--',tab)
+    console.log('this.reviews.length : ',this.reviews.length)
     const indexADecaler = tab.findIndex( element => element==true)
-    if(indexADecaler<this.reviews.length){
+    console.log('indexADecaler : ',indexADecaler)
+    // if(indexADecaler>=0){
+      console.log('hihi')
       tab[indexADecaler]=false
       tab[indexADecaler+1]=true
-    }
+    // }
   }
 
   decalageEtatAGauche(tab : boolean[]) : void{
