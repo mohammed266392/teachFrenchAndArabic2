@@ -104,3 +104,13 @@
 .container_fleche--droite.hidden{
     display: none;
 }
+
+.container_review_etoile{
+    display: flex;
+    gap: 5px;
+    margin-left: 2px;
+}
+
+.etoile{
+    width: 15px;
+}

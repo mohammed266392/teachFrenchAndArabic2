@@ -12,15 +12,15 @@ import { NgClass, NgFor } from '@angular/common';
 export class ReviewComponent {
 
   reviews : Review[] = [
-    new Review('5','Moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','Antoine2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','Ayoub2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','Mounir2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review('5','moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'Moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'Antoine2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'Ayoub2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'Mounir2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
+    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
   ]
   reviewsByEtats : boolean[][] = []
   indexMain : number = 0 

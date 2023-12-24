@@ -10,7 +10,21 @@
                                 'container_review--main': reviewByEtat[2],
                                 'container_review--right': reviewByEtat[3],
                                 'container_review--too-right': reviewByEtat[4]}">
-        {{reviews[indexOfelement].username}}
+        <div class="container_review_etoile">
+            <div *ngFor="let _ of [].constructor(reviews[indexOfelement].note); let i = index">
+                <img class="etoile" src="./../../assets/images/etoile.png" alt="">
+            </div>
+        </div>
+        <div class="container_review_date">
+            {{reviews[indexOfelement].datePublication}}
+        </div>
+        <div class="container_review_description">
+            {{reviews[indexOfelement].description}}
+        </div>
+        <div class="container_review_user">
+            {{reviews[indexOfelement].username}}
+        </div>
+        
         </div>
         
 <!--         
