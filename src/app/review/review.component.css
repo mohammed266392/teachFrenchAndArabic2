@@ -158,3 +158,15 @@ path {
     color: var(--main-color);
     font-size: x-large;
 }
+
+@media screen and (max-width:500px) {
+
+.container_texte{
+    top: 20%;
+}
+.container_review_block {
+    height: 50%;
+    width: 280px;
+}
+
+}
