@@ -58,7 +58,7 @@
         margin-top: 10px;
         width: 70%;
         height: 1px;
-        background-color: black;
+        background-color: var(--main-color2);
         transition: width 0.5s ease;
 }
 .container_content_button:hover .container_content_button_sousligne{
@@ -66,8 +66,10 @@
 }
 
 .container_content_title{
+    color: var(--main-color2);
     font-size: x-large;
-    text-shadow: 1px 1px 1px #ffffffc4;
+
+    /* text-shadow: 1px 1px 1px #ffffffc4; */
 }
 
 @media screen and (max-width:500px) {

@@ -1,12 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+
+	/* Temmplate 2 */
+    --main-bg-color: rgb(255, 255, 255);
+    --main-color: #383026ff;
+	--main-color2: #9e561eff;
+	--main-color3: #94812bff;
+	--main-color-rgba: 56, 48, 38;
+	--main-color2-rgba: 158, 86, 30;
+	--main-color3-rgba: 148, 129, 43;
+    --taille-standard : 225px;
+	--largeur-header : 88px;
+	--opacity:0.3;
+	/* Temmplate 1 
     --main-bg-color: #ffffff;
     --main-color: #000000;
     --bouton1-bg-color : #000000;
     --border1-color : #000000;
     --bouton1-color : #ffffff;
     --taille-standard : 225px;
-	--largeur-header : 53px
+	--largeur-header : 53px; */
+	/* couleur-tabac: #9e561eff
+	couleur-maduro :#383026ff
+	couleur-kaki : #94812bff */
   }
 
   
@@ -57,3 +73,6 @@ table {
 	border-spacing: 0;
 }
 
+body{
+	font-family: 'Montserrat', sans-serif;
+}
