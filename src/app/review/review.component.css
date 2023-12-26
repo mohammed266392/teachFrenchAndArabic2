@@ -166,7 +166,16 @@ path {
 }
 .container_review_block {
     height: 50%;
-    width: 280px;
+    width: 260px;
+}
+
+.container_fleche--droite{
+    width: 21px;
+    right: 2%
+}
+.container_fleche--gauche{
+    width: 21px;
+    left: 2%
 }
 
 }

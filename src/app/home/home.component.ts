@@ -10,7 +10,9 @@ import { ReviewComponent } from '../review/review.component';
   styleUrls: ['./home.component.css'],
   standalone:true,
   imports :  [TextAnimationComponent, Landing2Component, SavoirFaire2Component, ReviewComponent]
+
 })
 export class HomeComponent {
+
 
 }
