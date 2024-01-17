@@ -23,13 +23,13 @@
             </div>
         </div>
         <div class="container_review_date">
-            {{reviews[indexOfelement].datePublication}}
+            {{reviews[indexOfelement].datePublication.slice(0,10)}}
         </div>
         <div class="container_review_description">
-            {{reviews[indexOfelement].description}}
+            {{reviews[indexOfelement].review}}
         </div>
         <div class="container_review_user">
-            {{reviews[indexOfelement].username}}
+            {{reviews[indexOfelement].prospect.userName}}
         </div>
         
         </div>

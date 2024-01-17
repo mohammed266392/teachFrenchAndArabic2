@@ -16,16 +16,29 @@ export class Onglet {
     }
 }
 
-export class Review {
-    note : number
-    username :string
-    description:string
-    datePublication:string
+export class Prospect{
+    constructor( public id : number,
+        public userName : string,
+        public email : string,
+        public companyName : string){}
+}
 
-    constructor(note: number, username: string, description:string, datePublication:string ) {
-        this.note = note;
-        this.username = username;
-        this.description = description;
-        this.datePublication = datePublication;
+export class Review {
+
+
+    constructor(
+        public id : number,
+        public review : string,
+        public note : number,
+        public datePublication: string,
+        public prospect : Prospect){}
+
+    getProspect() : Prospect {
+        return this.prospect
     }
+
+    getDatePublication() : string {
+        return this.datePublication.slice(0,10)
+    }
+    
 }

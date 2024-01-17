@@ -5,6 +5,7 @@ import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { Routes, provideRouter } from '@angular/router';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 
   const routes: Routes = [
@@ -26,6 +27,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
+      provideHttpClient(),
       importProvidersFrom(BrowserModule),
       provideRouter(routes)
     ]

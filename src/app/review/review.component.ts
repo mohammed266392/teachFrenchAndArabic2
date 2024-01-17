@@ -1,41 +1,50 @@
-import { Component } from '@angular/core';
-import { Review } from '../object';
+import { Component, OnInit } from '@angular/core';
+import { Prospect, Review } from '../object';
 import { NgClass, NgFor } from '@angular/common';
+import { ReviewsServiceService } from '../services/reviews-service.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
   styleUrls: ['./review.component.css'],
   standalone:true,
-  imports:[NgClass, NgFor]
+  imports:[NgClass, NgFor],
+  providers:[ReviewsServiceService]
 })
-export class ReviewComponent {
+export class ReviewComponent implements OnInit{
 
-  reviews : Review[] = [
-    new Review(5,'Moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'Antoine2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'Ayoub2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'Mounir2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'moha2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-    new Review(5,'mohaFIN2656','Super entreprise, de super finition, ça fait plaisir !!','2023-10-02'),
-  ]
+  reviews : Review[] = []
   reviewsByEtats : boolean[][] = []
   indexMain : number = 0 
   hiddenFlecheDroite :boolean=false
   hiddenFlecheGauche :boolean=true
 
-  constructor() { 
-    this.initialisationReviews()
-    this.hiddenFlecheDroite = this.isHiddenFlecheDroite()
-    this.hiddenFlecheGauche = this.isHiddenFlecheGauche()
-    console.log('initialisation : ',this.reviewsByEtats)
+  constructor(private reviewsService : ReviewsServiceService) { 
+  }
+  async ngOnInit() {
+     await this.retrieveAllReviews();
+     this.hiddenFlecheDroite = this.isHiddenFlecheDroite()
+     this.hiddenFlecheGauche = this.isHiddenFlecheGauche()
+
+  }
+  async retrieveAllReviews() {
+    try {
+      console.log( 'this.reviewsByEtats 1', this.reviewsByEtats)
+      // this.reviewsService.getAllReviews().subscribe( x => console.log("mes donnes :",x))
+      const data = await firstValueFrom(this.reviewsService.getAllReviews(),);
+      console.log('ma data ', data);
+      this.reviews = data;
+      this.initialisationReviews();
+    } catch (error) {
+      console.error('Une erreur s\'est produite lors de la récupération des avis', error);
+    }
   }
 
   initialisationReviews(){
+    console.log("voila les reviews : ",this.reviews)
     for(let i = 0; i< this.reviews.length; i++){
+      console.log("i : ",i)
       if(i==0){
         this.reviewsByEtats.push([false,false,true,false,false])
       }
@@ -46,6 +55,7 @@ export class ReviewComponent {
         this.reviewsByEtats.push([false,false,false,false,true])
       }
     }
+    console.log( 'this.reviewsByEtats 2', this.reviewsByEtats)
   }
 
 
@@ -93,12 +103,9 @@ export class ReviewComponent {
     console.log('6--',tab)
     console.log('this.reviews.length : ',this.reviews.length)
     const indexADecaler = tab.findIndex( element => element==true)
-    console.log('indexADecaler : ',indexADecaler)
-    // if(indexADecaler>=0){
       console.log('hihi')
       tab[indexADecaler]=false
       tab[indexADecaler+1]=true
-    // }
   }
 
   decalageEtatAGauche(tab : boolean[]) : void{
@@ -110,6 +117,7 @@ export class ReviewComponent {
   }
 
   isHiddenFlecheDroite() : boolean{
+    console.log('this.indexMain droite : ',this.reviews.length-1)
     return this.indexMain==this.reviews.length-1
   }
   isHiddenFlecheGauche() : boolean{
